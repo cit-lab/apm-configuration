@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<avaliable-groups>
+    <groups>
+        <group>
+            <name>Apmv3</name>
+            <applications>
+                <application>
+                    <name>jetty</name>
+                    <instances>
+                        <instance>
+                            <name>jetty-local</name>
+                        </instance>
+                    </instances>
+                </application>
+                <application>
+                    <name>dw</name>
+                    <instances>
+                        <instance>
+                            <name>dw-local</name>
+                        </instance>
+                    </instances>
+                </application>
+                <application>
+                    <name>mongodb</name>
+                    <instances>
+                        <instance>
+                            <name>mongodb-local</name>
+                        </instance>
+                    </instances>
+                </application>
+            </applications>
+            <connections>
+                <connection src="jetty-local" dst="dw-local"/>
+                <connection src="dw-local" dst="mongodb-local"/>
+            </connections>
+        </group>
+    </groups>
+</avaliable-groups>

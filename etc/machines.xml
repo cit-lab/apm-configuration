@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<available-machines>
+    <machines>
+        <machine>
+            <name>local</name>
+            <system>windows7</system>
+            <arch>x64</arch>
+            <!-- TODO: the real ip-->
+            <ip>0.0.0.0</ip>
+        </machine>
+        <machine>
+            <name>metal-gear</name>
+            <system>ubuntu</system>
+            <arch>x64</arch>
+            <ip>202.128.3.1</ip>
+        </machine>
+    </machines>
+</available-machines>

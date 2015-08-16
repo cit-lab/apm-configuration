@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<avaliable-applications>
+    <applications>
+        <application>
+            <name>jetty</name>
+            <type>server</type>
+        </application>
+        <application>
+            <name>dw</name>
+            <type>service</type>
+        </application>
+        <application>
+            <name>mongodb</name>
+            <type>database</type>
+        </application>
+    </applications>
+</avaliable-applications>

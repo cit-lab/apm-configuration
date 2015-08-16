@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aviabliable-instances>
+    <instances>
+        <instance application="jetty" machine="local">
+            <name>jetty-local</name>
+        </instance>
+        <instance application="dw" machine="local">
+            <name>dw-local</name>
+        </instance>
+        <instance application="mongo" machine="local">
+            <name>mongodb-local</name>
+        </instance>
+    </instances>
+</aviabliable-instances>

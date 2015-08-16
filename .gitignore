@@ -1,0 +1,5 @@
+.idea
+target/*
+
+apm-configuration.iml
+dependency-reduced-pom.xml

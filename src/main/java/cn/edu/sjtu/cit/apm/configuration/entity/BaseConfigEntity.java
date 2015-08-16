@@ -1,5 +1,6 @@
 package cn.edu.sjtu.cit.apm.configuration.entity;
 
+import cn.edu.sjtu.cit.apm.configuration.InvalidConfigException;
 import org.apache.commons.configuration.HierarchicalConfiguration;
 
 /**

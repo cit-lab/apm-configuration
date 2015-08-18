@@ -11,18 +11,19 @@ import java.util.List;
  * Created by Pillar on 2015/8/16.
  */
 public class InstanceConfigCollection extends BaseConfigCollection<InstanceConfigEntity> {
-    public InstanceConfigCollection() throws ConfigurationException{
+    public InstanceConfigCollection() throws ConfigurationException {
         super();
-        read("etc/instances.xml","instances.instance");
+        read("etc/instances.xml", "instances.instance");
     }
 
     // For instances inside applications ( and these applications are inside application group)
-    public InstanceConfigCollection(List<HierarchicalConfiguration> configurations){
+    public InstanceConfigCollection(List<HierarchicalConfiguration> configurations) {
         super();
         read(configurations);
     }
 
-    @Override public InstanceConfigEntity createConfig(HierarchicalConfiguration configuration){
+    @Override
+    public InstanceConfigEntity createConfig(HierarchicalConfiguration configuration) {
         return new InstanceConfigEntity(configuration);
     }
 }

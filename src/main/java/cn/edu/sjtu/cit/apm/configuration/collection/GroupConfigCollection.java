@@ -8,12 +8,13 @@ import org.apache.commons.configuration.HierarchicalConfiguration;
  * Created by Pillar on 2015/8/16.
  */
 public class GroupConfigCollection extends BaseConfigCollection<GroupConfigEntity> {
-    public GroupConfigCollection() throws ConfigurationException{
+    public GroupConfigCollection() throws ConfigurationException {
         super();
-        read("etc/groups.xml","groups.group");
+        read("etc/groups.xml", "groups.group");
     }
 
-    @Override public GroupConfigEntity createConfig(HierarchicalConfiguration configuration){
+    @Override
+    public GroupConfigEntity createConfig(HierarchicalConfiguration configuration) {
         return new GroupConfigEntity(configuration);
     }
 }

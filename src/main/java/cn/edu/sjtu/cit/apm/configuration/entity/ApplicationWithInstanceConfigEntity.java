@@ -11,14 +11,18 @@ public class ApplicationWithInstanceConfigEntity extends ApplicationConfigEntity
     @Getter
     protected InstanceConfigCollection instances;
 
-    public ApplicationWithInstanceConfigEntity(HierarchicalConfiguration configuration){super(configuration);}
+    public ApplicationWithInstanceConfigEntity(HierarchicalConfiguration configuration) {
+        super(configuration);
+    }
 
-    @Override public void readConfig(){
+    @Override
+    public void readConfig() {
         super.readConfig();
         this.instances = new InstanceConfigCollection(configuration.configurationsAt("instances.instance"));
     }
 
-    @Override public String toString(){
+    @Override
+    public String toString() {
         return super.toString() + "\n instances are \n" + getInstances().toString();
     }
 }

@@ -7,7 +7,7 @@
         <instance application="dw" machine="local">
             <name>dw-local</name>
         </instance>
-        <instance application="mongo" machine="local">
+        <instance application="mongodb" machine="local">
             <name>mongodb-local</name>
         </instance>
     </instances>

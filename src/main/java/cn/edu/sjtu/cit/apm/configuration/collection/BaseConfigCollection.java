@@ -15,19 +15,19 @@ import java.util.List;
 public abstract class BaseConfigCollection<T extends BaseConfigEntity> {
     protected List<T> configs;
 
-    public BaseConfigCollection(){
+    public BaseConfigCollection() {
         configs = new ArrayList<T>();
     }
 
-    public List<T> getAll(){
+    public List<T> getAll() {
         return configs;
     }
 
-    protected void read(String fileName, String nodeName) throws ConfigurationException{
-       read(new XMLConfiguration(fileName).configurationsAt(nodeName));
+    protected void read(String fileName, String nodeName) throws ConfigurationException {
+        read(new XMLConfiguration(fileName).configurationsAt(nodeName));
     }
 
-    protected void read(List<HierarchicalConfiguration> configurations){
+    protected void read(List<HierarchicalConfiguration> configurations) {
         // clean the list
         configs = new ArrayList<T>();
         for (Iterator it = configurations.iterator(); it.hasNext(); ) {
@@ -38,13 +38,14 @@ public abstract class BaseConfigCollection<T extends BaseConfigEntity> {
 
     public abstract T createConfig(HierarchicalConfiguration configuration);
 
-    @Override public String toString(){
+    @Override
+    public String toString() {
         // loop and show everyone
         String str = "\nprinting: " + super.toString() + "\n";
-        for(Iterator it = configs.iterator();it.hasNext();){
+        for (Iterator it = configs.iterator(); it.hasNext(); ) {
             str += it.next().toString() + "\n";
         }
         str += "printing end for collection " + this.getClass() + "\n";
-        return  str;
+        return str;
     }
 }

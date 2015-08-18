@@ -15,17 +15,19 @@ public class GroupConfigEntity extends BaseConfigEntity {
     @Getter
     protected ConnectionConfigCollection connections;
 
-    public GroupConfigEntity(HierarchicalConfiguration configuration){
+    public GroupConfigEntity(HierarchicalConfiguration configuration) {
         super(configuration);
     }
 
-    @Override public void readConfig(){
+    @Override
+    public void readConfig() {
         this.name = configuration.getString("name");
         this.applications = new ApplicationWithInstanceConfigCollection(configuration.configurationsAt("applications.application"));
         this.connections = new ConnectionConfigCollection(configuration.configurationsAt("connections.connection"));
     }
 
-    @Override public String toString(){
+    @Override
+    public String toString() {
         return super.toString() +
                 "\n applications are \n" + applications +
                 "\n connections are \n" + connections;

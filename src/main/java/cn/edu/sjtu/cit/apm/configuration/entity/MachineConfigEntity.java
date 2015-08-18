@@ -10,16 +10,18 @@ public class MachineConfigEntity extends BaseConfigEntity {
     @Getter
     protected String ip;
 
-    public MachineConfigEntity(HierarchicalConfiguration configuration){
+    public MachineConfigEntity(HierarchicalConfiguration configuration) {
         super(configuration);
     }
 
-    @Override public void readConfig(){
+    @Override
+    public void readConfig() {
         this.name = configuration.getString("name");
         this.ip = configuration.getString("ip");
     }
 
-    @Override public String toString(){
+    @Override
+    public String toString() {
         return super.toString() + ",ip=" + getIp();
     }
 }

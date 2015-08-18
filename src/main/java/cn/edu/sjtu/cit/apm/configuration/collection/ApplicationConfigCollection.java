@@ -10,18 +10,19 @@ import java.util.List;
  * Created by Pillar on 2015/8/16.
  */
 public class ApplicationConfigCollection extends BaseConfigCollection<ApplicationConfigEntity> {
-    public ApplicationConfigCollection() throws ConfigurationException{
+    public ApplicationConfigCollection() throws ConfigurationException {
         super();
-        read("etc/applications.xml","applications.application");
+        read("etc/applications.xml", "applications.application");
     }
 
     // For applications inside application groups
-    public ApplicationConfigCollection(List<HierarchicalConfiguration> configurations){
+    public ApplicationConfigCollection(List<HierarchicalConfiguration> configurations) {
         super();
         read(configurations);
     }
 
-    @Override public ApplicationConfigEntity createConfig(HierarchicalConfiguration configuration){
+    @Override
+    public ApplicationConfigEntity createConfig(HierarchicalConfiguration configuration) {
         return new ApplicationConfigEntity(configuration);
     }
 }

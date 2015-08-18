@@ -11,18 +11,21 @@ public class InstanceConfigEntity extends BaseConfigEntity {
     protected String application;
     @Getter
     protected String machine;
-    public InstanceConfigEntity(HierarchicalConfiguration configuration){
+
+    public InstanceConfigEntity(HierarchicalConfiguration configuration) {
         super(configuration);
     }
 
-    @Override public void readConfig(){
+    @Override
+    public void readConfig() {
         // TODO: it's better to put name in parent class
         this.name = configuration.getString("name");
         this.application = configuration.getString("[@application]");
         this.machine = configuration.getString("[@machine]");
     }
 
-    @Override public String toString(){
+    @Override
+    public String toString() {
         return super.toString() + ",application=" + getApplication() + ",machine=" + getMachine();
     }
 }

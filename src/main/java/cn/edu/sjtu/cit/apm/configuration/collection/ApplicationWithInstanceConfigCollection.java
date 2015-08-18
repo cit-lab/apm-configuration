@@ -9,12 +9,13 @@ import java.util.List;
  * Created by Pillar on 2015/8/16.
  */
 public class ApplicationWithInstanceConfigCollection extends BaseConfigCollection<ApplicationWithInstanceConfigEntity> {
-    public ApplicationWithInstanceConfigCollection(List<HierarchicalConfiguration> configurations){
+    public ApplicationWithInstanceConfigCollection(List<HierarchicalConfiguration> configurations) {
         super();
         read(configurations);
     }
 
-    @Override public ApplicationWithInstanceConfigEntity createConfig(HierarchicalConfiguration configuration){
+    @Override
+    public ApplicationWithInstanceConfigEntity createConfig(HierarchicalConfiguration configuration) {
         return new ApplicationWithInstanceConfigEntity(configuration);
     }
 }

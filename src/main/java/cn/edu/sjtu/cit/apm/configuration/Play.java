@@ -10,7 +10,7 @@ import cn.edu.sjtu.cit.apm.configuration.collection.MachineConfigCollection;
  * Created by Pillar on 2015/8/16.
  */
 public class Play {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         System.out.println("This configuration play!");
         ApplicationConfigCollection ac = new ApplicationConfigCollection();
         System.out.println(ac.getAll().size());

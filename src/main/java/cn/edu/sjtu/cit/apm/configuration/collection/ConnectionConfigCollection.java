@@ -10,12 +10,13 @@ import java.util.List;
  */
 public class ConnectionConfigCollection extends BaseConfigCollection<ConnectionConfigEntity> {
 
-    public ConnectionConfigCollection(List<HierarchicalConfiguration> configurations){
+    public ConnectionConfigCollection(List<HierarchicalConfiguration> configurations) {
         super();
         read(configurations);
     }
 
-    @Override public ConnectionConfigEntity createConfig(HierarchicalConfiguration configuration){
+    @Override
+    public ConnectionConfigEntity createConfig(HierarchicalConfiguration configuration) {
         return new ConnectionConfigEntity(configuration);
     }
 }

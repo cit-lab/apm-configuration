@@ -2,13 +2,13 @@
 <avaliable-groups>
     <groups>
         <group>
-            <name>Apmv3</name>
+            <name>Application monitor v3</name>
             <applications>
                 <application>
                     <name>jetty</name>
                     <instances>
                         <instance>
-                            <name>jetty-local</name>
+                            <name>jetty-monitor-server</name>
                         </instance>
                     </instances>
                 </application>
@@ -16,7 +16,7 @@
                     <name>dw</name>
                     <instances>
                         <instance>
-                            <name>dw-local</name>
+                            <name>dw-monitor-server</name>
                         </instance>
                     </instances>
                 </application>
@@ -24,14 +24,46 @@
                     <name>mongodb</name>
                     <instances>
                         <instance>
-                            <name>mongodb-local</name>
+                            <name>mongodb-monitor-server</name>
                         </instance>
                     </instances>
                 </application>
             </applications>
             <connections>
-                <connection src="jetty-local" dst="dw-local"/>
-                <connection src="dw-local" dst="mongodb-local"/>
+                <connection src="jetty-monitor-server" dst="dw-monitor-server"/>
+                <connection src="dw-monitor-server" dst="mongodb-monitor-server"/>
+            </connections>
+        </group>
+        <group>
+            <name>RTM+STORM TODO:change me</name>
+            <applications>
+                <application>
+                    <name>rtm</name>
+                    <instances>
+                        <instance>
+                            <name>rtm-rtm-server</name>
+                        </instance>
+                    </instances>
+                </application>
+                <application>
+                    <name>storm</name>
+                    <instances>
+                        <instance>
+                            <name>storm-storm-server-1</name>
+                        </instance>
+                        <instance>
+                            <name>storm-storm-server-2</name>
+                        </instance>
+                        <instance>
+                            <name>storm-storm-server-3</name>
+                        </instance>
+                    </instances>
+                </application>
+            </applications>
+            <connections>
+                <connection src="rtm-rtm-server" dst="storm-storm-server-1"/>
+                <connection src="rtm-rtm-server" dst="storm-storm-server-2"/>
+                <connection src="rtm-rtm-server" dst="storm-storm-server-3"/>
             </connections>
         </group>
     </groups>

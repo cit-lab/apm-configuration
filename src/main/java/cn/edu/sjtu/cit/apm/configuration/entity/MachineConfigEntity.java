@@ -9,6 +9,10 @@ import org.apache.commons.configuration.HierarchicalConfiguration;
 public class MachineConfigEntity extends BaseConfigEntity {
     @Getter
     protected String ip;
+    @Getter
+    protected String location;
+    @Getter
+    protected String system;
 
     public MachineConfigEntity(HierarchicalConfiguration configuration) {
         super(configuration);
@@ -18,10 +22,13 @@ public class MachineConfigEntity extends BaseConfigEntity {
     public void readConfig() {
         this.name = configuration.getString("name");
         this.ip = configuration.getString("ip");
+        this.location = configuration.getString("location");
+        this.system = configuration.getString("system");
     }
 
     @Override
     public String toString() {
-        return super.toString() + ",ip=" + getIp();
+        return super.toString() +
+                ",ip=" + getIp() + ",location=" + getLocation() + ",system=" + getSystem();
     }
 }

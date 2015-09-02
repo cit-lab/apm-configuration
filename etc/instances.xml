@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aviabliable-instances>
     <instances>
-        <instance application="jetty" machine="local">
-            <name>jetty-local</name>
+        <instance application="jetty" machine="monitor-server-machine">
+            <name>jetty-monitor-server</name>
         </instance>
-        <instance application="dw" machine="local">
-            <name>dw-local</name>
+        <instance application="dw" machine="monitor-server-machine">
+            <name>dw-monitor-server</name>
         </instance>
-        <instance application="mongodb" machine="local">
-            <name>mongodb-local</name>
+        <instance application="mongodb" machine="monitor-server-machine">
+            <name>mongodb-monitor-server</name>
+        </instance>
+        <instance application="rtm" machine="rtm-server-machine">
+            <name>rtm-rtm-server</name>
+        </instance>
+        <instance application="storm" machine="storm-server-1-machine">
+            <name>storm-storm-server-1</name>
+        </instance>
+        <instance application="storm" machine="storm-server-2-machine">
+            <name>storm-storm-server-2</name>
+        </instance>
+        <instance application="storm" machine="storm-server-3-machine">
+            <name>storm-storm-server-3</name>
         </instance>
     </instances>
 </aviabliable-instances>

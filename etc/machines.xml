@@ -2,17 +2,40 @@
 <available-machines>
     <machines>
         <machine>
-            <name>local</name>
-            <system>windows7</system>
+            <name>monitor-server-machine</name>
+            <!-- TODO: maybe we should let collector report this, use sigar -->
+            <system>linux</system>
             <arch>x64</arch>
-            <!-- TODO: the real ip-->
-            <ip>0.0.0.0</ip>
+            <ip>134.56.7.8</ip>
+            <location>上海市浦东新区碧波路116号9号楼</location>
         </machine>
         <machine>
-            <name>metal-gear</name>
-            <system>ubuntu</system>
+            <name>rtm-server-machine</name>
+            <system>linux</system>
             <arch>x64</arch>
-            <ip>202.128.3.1</ip>
+            <ip>134.56.7.9</ip>
+            <location>上海市浦东新区碧波路116号9号楼</location>
+        </machine>
+        <machine>
+            <name>storm-server-1-machine</name>
+            <system>linux</system>
+            <arch>x64</arch>
+            <ip>134.56.7.9</ip>
+            <location>上海市浦东新区碧波路116号9号楼</location>
+        </machine>
+        <machine>
+            <name>storm-server-2-machine</name>
+            <system>linux</system>
+            <arch>x64</arch>
+            <ip>134.56.7.9</ip>
+            <location>上海市浦东新区碧波路116号9号楼</location>
+        </machine>
+        <machine>
+            <name>storm-server-3-machine</name>
+            <system>linux</system>
+            <arch>x64</arch>
+            <ip>134.56.7.9</ip>
+            <location>上海市浦东新区碧波路116号9号楼</location>
         </machine>
     </machines>
 </available-machines>

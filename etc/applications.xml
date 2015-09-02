@@ -13,5 +13,13 @@
             <name>mongodb</name>
             <type>database</type>
         </application>
+        <application>
+            <name>rtm</name>
+            <type>server</type>
+        </application>
+        <application>
+            <name>storm</name>
+            <type>data-processing</type>
+        </application>
     </applications>
 </avaliable-applications>

@@ -29,7 +29,7 @@ public class LogstashConfig {
     private String templatePath;
     private String redisHost;
     private String elasticSearchHost;
-    private String elasticSearchHttpPort;
+    private Integer elasticSearchHttpPort;
 
     public LogstashConfig(String confPath) {
         this.confPath = confPath;
@@ -48,7 +48,7 @@ public class LogstashConfig {
         templatePath = config.getString("logstash.conf.template");
         redisHost = config.getString("logstash.redis.host");
         elasticSearchHost = config.getString("logstash.elasticsearch.host");
-        elasticSearchHost = config.getString("logstash.elasticsearch.httpport");
+        elasticSearchHttpPort = config.getInt("logstash.elasticsearch.http-port");
         LOGGER.debug("host is " + elasticSearchHost);
         LOGGER.debug("http port is " + elasticSearchHttpPort);
     }
